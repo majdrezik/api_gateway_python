@@ -32,9 +32,12 @@ The API Gateway is responsible for routing incoming requests to the appropriate 
   ```flask run --host 172.31.255.1 --port 5000```
 
 3. Run the services:
-   - ```cd services/{SERVICE_NAME}```
+   - ```cd services/{SERVICE_NAME_1}```
      
    - ```flask run --host 192.168.1.195 --port 10030```
+
+   - ```cd services/{SERVICE_NAME_2}```
+   - ```flask run --host 192.168.1.195 --port 10031```
      
 _Make sure you assing different ports to each service_
 
