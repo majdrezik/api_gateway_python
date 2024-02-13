@@ -44,3 +44,18 @@ _Make sure you assing different ports to each service_
 On `Postman` navigate to `http://127.0.0.1:5000` which acts as our Entrypoint (client) and choose different apis from the list (e.g `http://127.0.0.1:5000/v1/echo`)
 This will show the starting point and the end result (starting from one url and ending in another url).
 You can try accessing the micro-service directly, like `http://192.168.1.195:10030/` . this will fail (made a simple firewall)
+
+### Notice what will happen when we choose to hit the /v1/register API - It'll get the micro-service that's running on a totally different url
+![Screenshot 2024-02-13 at 3 06 38](https://github.com/majdrezik/api_gateway_python/assets/39953455/61dad2d4-4060-490d-ac51-419059d7326f)
+
+
+### Here's the Entrypoint of the API_GATEWAY where we can see the active APIs
+![Screenshot 2024-02-13 at 3 07 45](https://github.com/majdrezik/api_gateway_python/assets/39953455/5e35c3ff-d3a5-40df-84e3-633190f0d6b7)
+
+
+### Notice what will happen when we choose to hit the /v1/echo API - It'll get the micro-service that's running on a totally different url
+![Screenshot 2024-02-13 at 3 06 59](https://github.com/majdrezik/api_gateway_python/assets/39953455/4bd80d78-68cc-4ac8-b12a-d9eaf703ae9d)
+
+### When we try to access the micro-service directly, the request will be blocked. in real life this will be handled via FIREWALL or other ways, here I created a DUMMY firewall with ALLOWED LIST that only clients coming from API_GATEWAY can access (original url)
+![Screenshot 2024-02-13 at 3 07 18](https://github.com/majdrezik/api_gateway_python/assets/39953455/7a0894dd-0106-4c1f-bb19-22f2057ac077)
+
